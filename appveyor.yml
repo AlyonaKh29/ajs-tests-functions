@@ -7,9 +7,13 @@ install:
   - ps: Install-Product node $env:NODE_VERSION
   - npm install
 
-build:
-  - npm run lint
-  - npm test
+build: off
+
+build_script:
+  - npm run build
+
+test_script:
+  - npm run lint && npm test
 
 artifacts:
   - path: '**/coverage/lcov-report/index.html'
