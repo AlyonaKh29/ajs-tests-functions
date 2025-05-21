@@ -9,9 +9,6 @@ install:
 
 build: off
 
-build_script:
-  - npm run build
-
 test_script:
   - npm run lint && npm test
 
